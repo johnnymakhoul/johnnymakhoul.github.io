@@ -468,14 +468,14 @@ body.nav-active { overflow: hidden; }
 
 .hero-title {
   text-transform: uppercase;
-  word-break: break-all;
+  /* word-break: break-all; */
 }
 
 .hero-subtitle {
   font-size: var(--fs-8);
   text-transform: uppercase;
   font-weight: var(--fw-700);
-  color: var(--white);
+  color: white;
   letter-spacing: 2px;
   line-height: 1.5em;
   margin-block: 10px 30px;
@@ -983,7 +983,7 @@ body.nav-active { overflow: hidden; }
 
   .hero-content { width: 55%; }
 
-  .hero-title { word-break: normal; }
+  .hero-title { word-break: keep-all; text-wrap: wrap; }
 
   .hero .section-text { margin-block-end: 52px; }
 
