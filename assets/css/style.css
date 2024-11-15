@@ -512,7 +512,7 @@ body.nav-active { overflow: hidden; }
 
 }
 
-.hero .section-text { margin-block: 30px; }
+.hero .section-text { margin-block: 30px; backdrop-filter: blur(10px) saturate(70%); color: aliceblue; }
 
 .hero .btn { margin-inline: auto; }
 
