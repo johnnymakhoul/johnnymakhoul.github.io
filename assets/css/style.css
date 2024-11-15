@@ -456,7 +456,9 @@ body.nav-active { overflow: hidden; }
 
 .overlay.active { display: block; }
 
-
+.i18n-button {
+  color: white
+}
 
 
 

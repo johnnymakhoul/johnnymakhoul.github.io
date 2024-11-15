@@ -147,3 +147,44 @@ const initSlider = function (currentSlider) {
 }
 
 for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
+
+/**
+ * INTERNATIONALIZATION
+ */
+const setLanguage = function(language) {
+  var langData;
+
+  if (language === 'fr') {
+    langData = lang_fr;
+  } else {
+    langData = lang_en; // Default to English
+  }
+
+  // Update text content
+  for (const key in langData.text) {
+    var element = document.getElementById(key);
+    if (element) {
+      element.textContent = langData.text[key];
+    }
+  }
+
+  // Update aria-labels
+  for (const key in langData['aria-label']) {
+    var element = document.getElementById(key);
+    if (element) {
+      element.setAttribute('aria-label', langData['aria-label'][key]);
+    }
+  }
+}
+
+document.getElementById('switch-to-fr').addEventListener('click', function() {
+  setLanguage('fr');
+});
+
+document.getElementById('switch-to-en').addEventListener('click', function() {
+  setLanguage('en');
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  setLanguage('fr');
+});
